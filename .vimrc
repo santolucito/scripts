@@ -65,3 +65,4 @@ let &guicursor = &guicursor . ",a:blinkon0"
 
 set noeb vb t_vb=
 
+syntax on
