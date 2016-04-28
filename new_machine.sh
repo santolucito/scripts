@@ -1,17 +1,31 @@
-sudo apt-get update
-sudo apt-get install haskell-platform git
-y
-git clone https://github.com/santolucito/scripts.git
-cd scripts
-mv .vimrc ~/.vimrc
-mv .profile ~/.profile
+echo 'mark24' | sudo -kS ls
 
+sudo apt-get update
+sudo apt-get -y install vim-gui-common vim-runtime
+cp .vimrc ~/.vimrc
+cp .profile ~/.profile
+cp .inputrc ~/.inputrc
+
+source ~/.profile\
+
+printf '\n\n\nLoaded profile preferences...\n\n\n'
+
+
+sudo apt-get -y install haskell-platform 
 sudo add-apt-repository -y ppa:hvr/ghc
 sudo apt-get update
-sudo apt-get install cabal-install-1.22 ghc-7.10.2 
+sudo apt-get -y install cabal-install-1.22 ghc-7.10.2
+cabal update
+
 #for liquidhaskell 
 #sudo apt-get install ocaml camlidl
 
-echo "PATH=\"$HOME/.cabal/bin:/opt/ghc/7.10.2/bin:/opt/cabal/1.22/bin:$PATH\"" ~/.profile
+printf '\n\n\nInstalled Haskell...\n\n\n'
 
-cabal update
+git config --global user.name "Mark Santolucito"
+git config --global user.email "mark.santolucito@yale.edu"
+
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600000'
+
+printf '\n\n\nSetup git...\n\n\n'
