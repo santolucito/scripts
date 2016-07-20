@@ -10,7 +10,7 @@ source ~/.profile\
 
 printf '\n\n\nLoaded profile preferences...\n\n\n'
 
-
+sudo apt-get -y install build-essential
 sudo apt-get -y install haskell-platform 
 sudo add-apt-repository -y ppa:hvr/ghc
 sudo apt-get update
