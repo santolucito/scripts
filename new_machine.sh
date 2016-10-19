@@ -2,6 +2,8 @@ echo 'mark24' | sudo -kS ls
 
 sudo apt-get update
 sudo apt-get -y install vim-gui-common vim-runtime
+
+mkdir ~/.vim/undo #for persistant undo for vim
 cp .vimrc ~/.vimrc
 cp .profile ~/.profile
 cp .inputrc ~/.inputrc
@@ -14,7 +16,7 @@ sudo apt-get -y install build-essential
 sudo apt-get -y install haskell-platform 
 sudo add-apt-repository -y ppa:hvr/ghc
 sudo apt-get update
-sudo apt-get -y install cabal-install-1.22 ghc-7.10.2
+sudo apt-get -y install cabal-install-1.24 ghc-8.0.2
 cabal update
 
 #for liquidhaskell 
