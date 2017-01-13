@@ -10,3 +10,7 @@ Uppercase "HellO" to "HELLO" with gU then a movement.
 Lowercase "HellO" to "hello" with gu then a movement.
 
 tex.vim goes in ~/.vim/after/syntax/tex.vim 
+
+# useful tutorials
+
+https://nikita-volkov.github.io/profiling-cabal-projects/
