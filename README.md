@@ -11,6 +11,11 @@ Lowercase "HellO" to "hello" with gu then a movement.
 
 tex.vim goes in ~/.vim/after/syntax/tex.vim 
 
+put long line into sentances
+   
+   s/\.\ /\.\r/g
+
+
 # useful tutorials
 
 https://nikita-volkov.github.io/profiling-cabal-projects/
