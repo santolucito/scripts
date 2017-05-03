@@ -14,6 +14,7 @@ printf '\n\n\nLoaded profile preferences...\n\n\n'
 
 sudo apt-get -y install build-essential
 sudo apt-get -y install haskell-platform 
+sudo apt-get -y install software-properties-common
 sudo add-apt-repository -y ppa:hvr/ghc
 sudo apt-get update
 sudo apt-get -y install cabal-install-1.24 ghc-8.0.2
