@@ -11,9 +11,9 @@ Lowercase "HellO" to "hello" with gu then a movement.
 
 tex.vim goes in ~/.vim/after/syntax/tex.vim 
 
-put long line into sentances
+put long line into sentances in vi (double escape just for .md rendering)
    
-   s/\.\ /\.\r/g
+   s/\\.\ /\\.\r/g
 
 
 # useful tutorials
