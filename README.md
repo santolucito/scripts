@@ -15,7 +15,9 @@ tex.vim goes in ~/.vim/after/syntax/tex.vim
 remove midsentance line breaks (double escape just for .md rendering)
 
    s/\\n\\n/#/g %save multiline breaks
+   
    s/\\n/ /g    %undo single line breaks
+   
    s/#/\\r/g    %redo multiline breaks
    
 put long line into sentances in vi (double escape just for .md rendering)
