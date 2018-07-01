@@ -9,11 +9,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-"filetype plugin indent on    " required
+" filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 filetype plugin on
 
@@ -57,6 +57,8 @@ if has("cscope") && filereadable("/usr/bin/cscope")
    if filereadable("cscope.out")
       cs add $PWD/cscope.out
    " else add database pointed to by environment
+
+set tabstop=4
    elseif $CSCOPE_DB != ""
       cs add $CSCOPE_DB
    endif
@@ -72,11 +74,11 @@ endif
 
 filetype plugin on
 
-if &term=="xterm"
-     set t_Co=8
-     set t_Sb=[4%dm
-     set t_Sf=[3%dm
-endif
+" if &term=="xterm"
+"      set t_Co=8
+"      set t_Sb=[4%dm
+"     set t_Sf=[3%dm
+" endif
 
 " Don't wake up system with blinking cursor:
 " http://www.linuxpowertop.org/known.php
@@ -90,11 +92,10 @@ set viminfo='20,<1000,s1000
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set undofile                " Save undo's after file closes
+call system('mkdir ~/.vim/undo') " make sure the undo dir exists
 set undodir=$HOME/.vim/undo " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 
-Plugin 'wakatime/vim-wakatime'
-
-autocmd BufRead,BufNewFile *.tex setlocal spell
-
+" set spell
+autocmd FileType latex,tex,text,md,markdown setlocal spell
