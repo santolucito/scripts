@@ -1,3 +1,7 @@
+# requires manually install git
+# and cloning this repo, then run this script from the repo
+# will also require inputting wakatime api key
+
 echo 'mark24' | sudo -kS ls
 
 sudo apt-get update
@@ -10,6 +14,10 @@ cp .inputrc ~/.inputrc
 
 source ~/.profile\
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
+
 printf '\n\n\nLoaded profile preferences...\n\n\n'
 
 sudo apt-get -y install build-essential
@@ -17,7 +25,7 @@ sudo apt-get -y install haskell-platform
 sudo apt-get -y install software-properties-common
 sudo add-apt-repository -y ppa:hvr/ghc
 sudo apt-get update
-sudo apt-get -y install cabal-install-1.24 ghc-8.0.2
+sudo apt-get -y install cabal-install-head ghc-head
 cabal update
 
 #for liquidhaskell 
